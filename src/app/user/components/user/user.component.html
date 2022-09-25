@@ -1,0 +1,14 @@
+<div class="box mt-5">
+  <div class="my-2 w-25">
+    <app-ids
+      [ids]="ids"
+      [title]="'title'"
+      (selectedValue)="filterUserById($event)"
+    ></app-ids>
+  </div>
+  <div class="row">
+    <div class="col-md-3 col-sm-12" *ngFor="let user of users">
+      <app-oneuser [users]="user"></app-oneuser>
+    </div>
+  </div>
+</div>
